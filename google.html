@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Goople</title>
+    <script src="./script.js"></script>
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+body {
+    background: linear-gradient(to bottom, #070707, #ffffff);
+  }
+input[type="text"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button[type="submit"], button[type="button"] {
+  background-color: #f2f2f2;
+  color: #757575;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+button[type="submit"]:hover, button[type="button"]:hover {
+  background-color: #e6e6e6;
+  color: #202124;
+  border: 1px solid #202124;
+}
+.search-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(32,33,36,.28);
+  width: 550px;
+  max-width: 90%;
+  padding: 20px;
+  overflow: hidden;
+}
+.search-results h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.search-results .result {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+.search-results .result h3 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.search-results .result a {
+  font-size: 14px;
+  color: #1a0dab;
+  text-decoration: none;
+}
+.search-results .result a:hover {
+  text-decoration: underline;
+}
+
+  .highlight {
+    background-color: yellow;
+  }
+ 
+
+
+    </style>
+  </head>
+  <body>
+ 
+    <script>
+      function highlightWord() {
+        var searchText = document.getElementById("searchBox").value;
+        var content = document.getElementById("content").innerHTML;
+        var highlightedContent = content.replace(new RegExp(searchText, "gi"), "<span style='background-color: yellow'>" + searchText + "</span>");
+        document.getElementById("content").innerHTML = highlightedContent;
+      }
+    </script>
+    <input type="text" id="searchBox">
+    <button onclick="highlightWord()">Search</button>
+    <div id="content">
+
+        <div class="search-results">
+            <div class="search-result">
+              <h3> <a href="https://www.morocco-guide.com/culture/">Morocco Culture : Facts, Customs and Etiquette ...</a></h3>
+              <p>The Moroccans are the inhabitants and the citizens of Morocco, Most of them have Berber or Arab origin. there are 38M Moroccan in the World about 33M are living in Morocco and about 2.5M are living in France and Spain. Learn more about Moroccan people Moroccan …</p>
+            </div>
+            <div class="search-result">
+             <h3> <a href="https://www.moroccoworldnews.com/2020/12/327877/lifestyle-8-habits-and-customs-every-moroccan-understands">Lifestyle: 8 Habits and Customs Every Moroccan Understands</a></h3>
+
+              <p>Morocco is famous for its rich culture, diverse landscapes, historic monuments, and colorful cities that attract thousands of tourists from around the world. Many visitors rave about … </p>
+            </div>
+            <div class="search-result">
+              <h3> <a href="https://friendlymorocco.com/culture/the-moroccan-culture/">The Moroccan Culture & THE PEOPLE - Friendly Morocco.</a></h3>
+              <p>Morocco means in the first place the far west. Culture is represented in many things as arts, music, food, language, architecture, clothing, education and celebrations. All these things …</p>
+            </div>
+            <div class="search-result">
+              <h3> <a href="https://www.visitmorocco.com/en/see-do/culture">See & Do - Culture | Moroccan National Tourist Office</a></h3>
+              <p>Stroll every corner of Morocco's most cosmopolitan city ! Immerse yourself in a spiritual and historical journey between traditions and modernity. medina in Casablanca Unique crafts and traditions Ouarzazate, is the heartland of the southern region, where kasbahs, oases, arid mountains, are all elements that embellish the splendid city.</p>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+      </div>
+
+  </body>
+</html>
